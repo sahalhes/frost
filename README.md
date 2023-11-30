@@ -6,7 +6,6 @@ Tech Used: Python, Flask , HTML CSS , Bootstrap ,
 
 Results:
 
-<img src="https://user-images.githubusercontent.com/59831782/175793577-ecd60b61-505b-4456-972a-b63fdaf9cf8b.png" width="1000" height="400" />
 
 
 
