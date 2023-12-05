@@ -9,7 +9,7 @@ Results:
 
 
 
-To run this program inside your favoured IDE, set the virtual environment's Python executable to be the main Python interpreter (venv/Scripts/python.exe) and then run the main.py file.
+To run this program inside your favoured IDE, set the virtual environment's Python executable to be the main Python interpreter (venv/Scripts/python.exe) and then run the app.py file.
 
 If all else fails, the main dependencies for our program can be installed via this command:
 
