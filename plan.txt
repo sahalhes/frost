@@ -1,3 +1,4 @@
+// input period - 
 // news api to update excel csv  - 
 // main website - 
 // html preloader for algo website + styling black green red - 
