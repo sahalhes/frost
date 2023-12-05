@@ -20,7 +20,7 @@
                 <h2 class="mb-3">Top Stocks</h2>
                 <ul class="list-group">
                     {% for stock in stock_predictor.top %}
-                        <li class="list-group-item">{{ stock[0] }}: {{ stock[1]|round(4) }} % </li>
+                        <li class="list-group-item">{{ stock[0] }}: {{ stock[1]|round(4) }} $ </li>
                     {% endfor %}
                 </ul>
             </div>
@@ -29,7 +29,7 @@
                 <h2 class="mb-3">Bottom Stocks</h2>
                 <ul class="list-group">
                     {% for stock in stock_predictor.bottom %}
-                        <li class="list-group-item">{{ stock[0] }}: {{ stock[1]|round(4) }} % </li>
+                        <li class="list-group-item">{{ stock[0] }}: {{ stock[1]|round(4) }} $ </li>
                     {% endfor %}
                 </ul>
             </div>
