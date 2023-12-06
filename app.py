@@ -1,10 +1,7 @@
 from flask import Flask, render_template
 from flask import Flask, render_template
 import yfinance as yf
-import pandas as pd
-import sys 
 
-sys.setrecursionlimit(500)
 
 app = Flask(__name__)
 
