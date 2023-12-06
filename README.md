@@ -6,7 +6,7 @@ Statistical arbitrage was employed as an additional analytical approach, specifi
 
 
 ## Project URL
-Visit the project [FuturiStock](#) .
+Visit the project [FuturiStock](http://sahalhes.pythonanywhere.com/) (under maintenance)
 
 ## Technologies Used
 - **Python**: Backend development using Flask.
