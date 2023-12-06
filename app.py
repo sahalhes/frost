@@ -1,9 +1,9 @@
 from flask import Flask, render_template
-from flask import Flask, render_template
 import yfinance as yf
-
+from multiprocessing import Pool
 
 app = Flask(__name__)
+
 
 def getEMA(last_100):
     previousfiftyday = 0
@@ -377,21 +377,36 @@ class StockPredictor:
         self.top = top
         self.bottom = bottom
 
+def get_total_trend_points_for_symbol(symbol):
+    try:
+        data = yf.download(symbol, period='100d')
+        if len(data) < 100:
+            # Not enough data points, return a default value
+            return symbol, 0
+        totalTrendpoints = get_total_trend_points(data)
+        return symbol, totalTrendpoints
+    except KeyError:
+        # Symbol not found in the downloaded data, return a default value
+        return symbol, 0
+
+
 @app.route('/')
 def loading():
     return render_template("preloader.html")
 
 @app.route('/index')
 def index():
-    tickersPointsDict = {}
     with open('sp500.csv', 'r') as file:
         sp500_list = [line.rstrip('\n') for line in file]
-    stringOfTickers = ' '.join(sp500_list)
 
-    data = yf.download(stringOfTickers, group_by="ticker", period='100d')
-    for symbol in sp500_list:
-        points = get_total_trend_points(data[symbol])
-        tickersPointsDict[symbol] = points
+    # Use multiprocessing to parallelize the calculation of trend points for each symbol
+    with Pool() as pool:
+        results = pool.map(get_total_trend_points_for_symbol, sp500_list)
+
+    tickersPointsDict = dict(results)
+
+    #  existing logic for hill climbing
+    # ...
 
     topStocks = hillClimbTop(tickersPointsDict, 20)
     bottomStocks = hillClimbBottom(tickersPointsDict, 20)
@@ -401,4 +416,4 @@ def index():
     return render_template('index.html', stock_predictor=stock_predictor)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
