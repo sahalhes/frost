@@ -40,17 +40,17 @@ The FuturiStock project employs a momentum investing strategy, considering SMA v
    ```bash
    git clone https://github.com/sahalhes/frost
 
-Navigate to the project directory.
+2. Navigate to the project directory.
 
-2. Install dependencies:
+3. Install dependencies:
     ```bash
    pip install -r requirements.txt
 
-3. Run the Flask application locally:
+4. Run the Flask application locally:
     ```bash
    python app.py
 
-4. Open your web browser and visit http://localhost:5000 to see the project in action.
+5. Open your web browser and visit http://localhost:5000 to see the project in action.
 
 ## Further Plans
 
