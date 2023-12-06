@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask import Flask, render_template
 import yfinance as yf
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -336,8 +337,7 @@ def get_total_trend_points(ticker):
     totalTrendpoints += roc(ROCvalues)
     # call to average_volume function which returns average volume points
     totalTrendpoints += average_volume(lastClosingPrice, SMAvalues,
-                                       EMAvalues, lastVolume, avgVolumes)
-                                       
+                                       EMAvalues, lastVolume, avgVolumes)                                       
     return totalTrendpoints
 
 
@@ -378,6 +378,10 @@ class StockPredictor:
         self.bottom = bottom
 
 @app.route('/')
+def loading():
+    return render_template("preloader.html")
+
+@app.route('/index')
 def index():
     tickersPointsDict = {}
     with open('sp500.csv', 'r') as file:

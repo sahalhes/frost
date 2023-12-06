@@ -1,0 +1,46 @@
+body {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  
+  .list-group-item:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+
+  .green{
+    background: -webkit-linear-gradient(rgb(80, 195, 84), rgb(13, 233, 79));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  .red{
+    background: -webkit-linear-gradient(#ef4848, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  

@@ -1,6 +1,5 @@
-// input period - 
 // news api to update excel csv  - 
 // main website - 
-// html preloader for algo website + styling black green red - 
+// html preloader for algo website + styling black green red - Done
 // algo website graph and data - 
 // momentum strategy and statistical arbitrag 100 days - Done
