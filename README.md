@@ -40,7 +40,7 @@ The FuturiStock project employs a momentum investing strategy, considering SMA v
    ```bash
    git clone https://github.com/sahalhes/frost
 
-   Navigate to the project directory.
+Navigate to the project directory.
 
 2. Install dependencies:
     ```bash
