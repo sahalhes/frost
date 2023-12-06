@@ -4,7 +4,7 @@ import yfinance as yf
 import pandas as pd
 import sys 
 
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(500)
 
 app = Flask(__name__)
 
