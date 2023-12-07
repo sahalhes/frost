@@ -1,6 +1,6 @@
 # FuturiStock
 
-We team DevX has decided to make an AI Model which predicts top and bottom performing stocks of the next day based on the trends in the duration of analysis .
+I decided to make an AI Model which predicts top and bottom performing stocks of the next day based on the trends in the duration of analysis .
 FuturiStock is a stock prediction project that utilizes a momentum investing strategy, incorporating SMA values, EMA values, last volume, and average volume to predict top and bottom-performing stocks with profit/loss predictions.
 Statistical arbitrage was employed as an additional analytical approach, specifically focusing on a period of 100 days. This method involves identifying statistical patterns and deviations from historical data over the specified timeframe. By analyzing the statistical relationships between different stocks and market indicators during this 100-day period, the project aims to uncover potential trading opportunities and enhance the overall accuracy of stock predictions. This approach adds a quantitative dimension to the analysis, contributing valuable insights to the comprehensive strategy implemented in FuturiStock.
 
@@ -14,12 +14,6 @@ Visit the project prototype [FuturiStock](https://futuristock.pythonanywhere.com
 - **CSS**: Styling the frontend.
 - **Bootstrap**: Frontend framework for responsive design.
 - **JavaScript**: Enhancing frontend interactivity.
-
-## Google Technologies Used
-- **Google fonts**: In styling
-- **Google colab**: While testing and debugging the AI model
-- **Google chart**: For further development of project where graphs are to be plotted
-
 
 ## Principles Behind
 
